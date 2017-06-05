@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="R3MUS.Devpack.SlackRTMBot.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Token" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">xoxb-7037557250-qBwt7Yuyp5SRxUdL0fvbUGpp</Value>
+    </Setting>
+    <Setting Name="APIKey" Type="System.Int64" Scope="Application">
+      <Value Profile="(Default)">4355544</Value>
+    </Setting>
+    <Setting Name="VCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0knl1LoJnR1ycZqSaPUCB9iXF2fwqEfISLHQcbpzrCJD0uE5lMSKnbY7dzVoj9Yj</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
