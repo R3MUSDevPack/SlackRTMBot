@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using WebSocket4Net;
 
@@ -69,6 +70,7 @@ namespace R3MUS.Devpack.SlackRTMBot
         private void connection_Closed(object sender, EventArgs e)
         {
             Console.WriteLine("Connection Closed");
+            Thread.CurrentThread.Abort();
         }
         private void connection_MessageReceived(object sender, MessageReceivedEventArgs e)
         {
@@ -119,66 +121,59 @@ namespace R3MUS.Devpack.SlackRTMBot
 
                 if (BotResponse.GetCommands().Contains(command))
                 {
-                    if (true == false)// (message.User.ToLower().Equals("vasic"))
+                    switch (((Commands)Enum.Parse(typeof(Commands), command)))
                     {
-                        connection.SendMessage(string.Concat("You're not the boss of me, Vasic"), message.channel);
-                    }
-                    else
-                    {
-                        switch (((Commands)Enum.Parse(typeof(Commands), command)))
-                        {
-                            case Commands.ops:
-                                connection.SendMessage(string.Concat("*Eve Time is now ", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"), "*\r\n", BotResponse.GetCalendar()), message.channel);
-                                break;
-                            case Commands.deploymentops:
-                                connection.SendMessage(string.Concat("*Eve Time is now ", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"), "*\r\n", BotResponse.GetCalendar("deployment")), message.channel);
-                                break;
-                            case Commands.evetime:
-                                connection.SendMessage(string.Format("The time, at the 3rd beep, will be {0}. Beep. Beep. Beep.", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss")), message.channel);
-                                break;
-                            case Commands.serverstatus:
-                                connection.SendMessage(string.Format("TQ status: {0}", BotResponse.GetServerStatus()), message.channel);
-                                break;
-                            case Commands.status:
-                                connection.SendMessage(string.Format("I'm fine thank you. How are you?"), message.channel);
-                                break;
-                            case Commands.winninglotterynumbers:
-                                connection.SendMessage(string.Format("42 & 69"), message.channel);
-                                break;
-                            case Commands.towers:
-                                connection.SendMessage(BotResponse.GetTowers(), message.channel);
-                                break;
-                            case Commands.commands:
-                                connection.SendMessage(BotResponse.GetCommands(), message.channel);
-                                break;
-                            case Commands.help:
-                                connection.SendMessage(string.Format("I don't think I'm qualified to give you the help you need.", command), message.channel);
-                                break;
-                            case Commands.unbugger:
-                                connection.SendMessage(string.Format("I'm sorry Dave, but I can't let you do that."), message.channel);
-                                break;
-                            case Commands.moinlocation:
-                                connection.SendMessage(string.Format("His head is up his arse, second shelf on the right."), message.channel);
-                                break;
-                            case Commands.vaslocation:
-                                connection.SendMessage(string.Format("'Polishing his Erebus'."), message.channel);
-                                break;
-                            case Commands.ctacountdown:
-                                connection.SendMessage(BotResponse.GetCTACountdown(), message.channel);
-                                break;
-                            case Commands.joellocation:
-                                connection.SendMessage("'Looking for his banana.'", message.channel);
-                                break;
-                            case Commands.shouldiweartrouserstoday:
-                                connection.SendMessage(string.Format("Yes {0}, the judge ordered you to do so.", message.User), message.channel);
-                                break;
-                            case Commands.skintassong:
-                                connection.SendMessage(BotResponse.GetSkintasSong(), message.channel);
-                                break;
-                            default:
-                                connection.SendMessage(string.Format("You're a '{0}'", command), message.channel);
-                                break;
-                        }
+                        case Commands.ops:
+                            connection.SendMessage(string.Concat("*Eve Time is now ", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"), "*\r\n", BotResponse.GetCalendar()), message.channel);
+                            break;
+                        case Commands.deploymentops:
+                            connection.SendMessage(string.Concat("*Eve Time is now ", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"), "*\r\n", BotResponse.GetCalendar("deployment")), message.channel);
+                            break;
+                        case Commands.evetime:
+                            connection.SendMessage(string.Format("The time, at the 3rd beep, will be {0}. Beep. Beep. Beep.", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss")), message.channel);
+                            break;
+                        case Commands.serverstatus:
+                            connection.SendMessage(string.Format("TQ status: {0}", BotResponse.GetServerStatus()), message.channel);
+                            break;
+                        case Commands.status:
+                            connection.SendMessage(string.Format("I'm fine thank you. How are you?"), message.channel);
+                            break;
+                        case Commands.winninglotterynumbers:
+                            connection.SendMessage(string.Format("42 & 69"), message.channel);
+                            break;
+                        case Commands.towers:
+                            connection.SendMessage(BotResponse.GetTowers(), message.channel);
+                            break;
+                        case Commands.commands:
+                            connection.SendMessage(BotResponse.GetCommands(), message.channel);
+                            break;
+                        case Commands.help:
+                            connection.SendMessage(string.Format("I don't think I'm qualified to give you the help you need.", command), message.channel);
+                            break;
+                        case Commands.unbugger:
+                            connection.SendMessage(string.Format("I'm sorry Dave, but I can't let you do that."), message.channel);
+                            break;
+                        case Commands.moinlocation:
+                            connection.SendMessage(string.Format("His head is up his arse, second shelf on the right."), message.channel);
+                            break;
+                        case Commands.vaslocation:
+                            connection.SendMessage(string.Format("'Polishing his Erebus'."), message.channel);
+                            break;
+                        case Commands.ctacountdown:
+                            connection.SendMessage(BotResponse.GetCTACountdown(), message.channel);
+                            break;
+                        case Commands.joellocation:
+                            connection.SendMessage("'Looking for his banana.'", message.channel);
+                            break;
+                        case Commands.shouldiweartrouserstoday:
+                            connection.SendMessage(string.Format("Yes {0}, the judge ordered you to do so.", message.User), message.channel);
+                            break;
+                        case Commands.skintassong:
+                            connection.SendMessage(BotResponse.GetSkintasSong(), message.channel);
+                            break;
+                        default:
+                            connection.SendMessage(string.Format("You're a '{0}'", command), message.channel);
+                            break;
                     }
                 }
                 else

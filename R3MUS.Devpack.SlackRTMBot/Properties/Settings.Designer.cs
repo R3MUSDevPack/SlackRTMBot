@@ -25,7 +25,7 @@ namespace R3MUS.Devpack.SlackRTMBot.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("xoxb-7037557250-qBwt7Yuyp5SRxUdL0fvbUGpp")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Token {
             get {
                 return ((string)(this["Token"]));
@@ -34,7 +34,6 @@ namespace R3MUS.Devpack.SlackRTMBot.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("4355544")]
         public long APIKey {
             get {
                 return ((long)(this["APIKey"]));
@@ -43,7 +42,7 @@ namespace R3MUS.Devpack.SlackRTMBot.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0knl1LoJnR1ycZqSaPUCB9iXF2fwqEfISLHQcbpzrCJD0uE5lMSKnbY7dzVoj9Yj")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string VCode {
             get {
                 return ((string)(this["VCode"]));

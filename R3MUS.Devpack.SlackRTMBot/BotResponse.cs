@@ -86,8 +86,14 @@ namespace R3MUS.Devpack.SlackRTMBot
                 &&
                 (type == "all" || s.EventTitle.ToLower().Contains(type))
                 ).Take(5).Select(s => string.Concat(s.EventDateAsString, ": ", s.EventTitle)).ToArray<string>();
-
-            return string.Join("\r\n", events);
+            if (events.Length > 0)
+            {
+                return string.Join("\r\n", events);
+            }
+            else
+            {
+                return "I don't see any events in the in-game calendar.";
+            }
         }
 
         public static string GetServerStatus()
