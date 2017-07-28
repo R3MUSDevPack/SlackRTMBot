@@ -51,17 +51,22 @@ namespace R3MUS.Devpack.SlackRTMBot
 
         public async Task ConnectionRun()
         {
-            denDeets = start.channels.First(f => f.name.Equals("den"));
-            groupDeets = start.groups.First(f => f.name.Equals("it_projects"));
-
-            connection = new WebSocket(start.url);
-            connection.Opened += new EventHandler(connection_Opened);
-            connection.Error += new EventHandler<ErrorEventArgs>(connection_Error);
-            connection.Closed += new EventHandler(connection_Closed);
-            connection.MessageReceived += new EventHandler<MessageReceivedEventArgs>(connection_MessageReceived);
-            connection.Open();
-            Console.ReadLine();
+												Start();
         }
+
+								private void Start()
+								{
+												denDeets = start.channels.First(f => f.name.Equals("den"));
+												groupDeets = start.groups.First(f => f.name.Equals("it_projects"));
+
+												connection = new WebSocket(start.url);
+												connection.Opened += new EventHandler(connection_Opened);
+												connection.Error += new EventHandler<ErrorEventArgs>(connection_Error);
+												connection.Closed += new EventHandler(connection_Closed);
+												connection.MessageReceived += new EventHandler<MessageReceivedEventArgs>(connection_MessageReceived);
+												connection.Open();
+												Console.ReadLine();
+								}
 
         private void connection_Opened(object sender, EventArgs e)
         {
@@ -70,7 +75,7 @@ namespace R3MUS.Devpack.SlackRTMBot
         private void connection_Closed(object sender, EventArgs e)
         {
             Console.WriteLine("Connection Closed");
-            Thread.CurrentThread.Abort();
+												Start();
         }
         private void connection_MessageReceived(object sender, MessageReceivedEventArgs e)
         {
@@ -124,8 +129,12 @@ namespace R3MUS.Devpack.SlackRTMBot
                     switch (((Commands)Enum.Parse(typeof(Commands), command)))
                     {
                         case Commands.ops:
-                            connection.SendMessage(string.Concat("*Eve Time is now ", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"), "*\r\n", BotResponse.GetCalendar()), message.channel);
+																												connection.SendMessage("Moment please!", message.channel);
+																												connection.SendMessage(BotResponse.GetBoardEvents(), message.channel);
                             break;
+																								case Commands.calendar:
+																												connection.SendMessage(string.Concat("*Eve Time is now ", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"), "*\r\n", BotResponse.GetCalendar()), message.channel);
+																												break;
                         case Commands.deploymentops:
                             connection.SendMessage(string.Concat("*Eve Time is now ", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"), "*\r\n", BotResponse.GetCalendar("deployment")), message.channel);
                             break;

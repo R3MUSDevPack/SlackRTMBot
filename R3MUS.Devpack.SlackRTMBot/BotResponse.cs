@@ -1,5 +1,6 @@
 ﻿using eZet.EveLib.EveXmlModule;
 using R3MUS.Devpack.Core;
+using R3MUS.Devpack.Discord;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -96,6 +97,20 @@ namespace R3MUS.Devpack.SlackRTMBot
             }
         }
 
+								public static string GetBoardEvents()
+								{
+												var client = new Client() { UserName = Properties.Settings.Default.Email, Password = Properties.Settings.Default.Password };
+												if(client.Logon())
+												{
+																var post = new Post() { content = "!ops", nonce = "340545009352704000", tts = false };
+																client.PostMessage(Properties.Settings.Default.Channel, post);
+																System.Threading.Thread.Sleep(500);
+																var message = client.GetMessages(Properties.Settings.Default.Channel, 0).First();
+																return message.content.Replace("```", "\n");
+												}
+												return "Cannot talk to Jarvis. Sorry old bean.";
+								}
+
         public static string GetServerStatus()
         {
             var response = Web.BaseRequest("https://api.eveonline.com/Server/ServerStatus.xml.aspx");
@@ -159,7 +174,8 @@ namespace R3MUS.Devpack.SlackRTMBot
     public enum Commands
     {
         ops,
-        deploymentops,
+								calendar,
+								deploymentops,
         evetime,
         serverstatus,
         status,

@@ -18,3 +18,5 @@ d:\my documents\visual studio 2015\Projects\R3MUS.Devpack.SlackRTMBot\R3MUS.Devp
 d:\my documents\visual studio 2015\Projects\R3MUS.Devpack.SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\Nito.AsyncEx.Enlightenment.xml
 d:\my documents\visual studio 2015\Projects\R3MUS.Devpack.SlackRTMBot\R3MUS.Devpack.SlackRTMBot\obj\Debug\R3MUS.Devpack.SlackRTMBot.exe
 d:\my documents\visual studio 2015\Projects\R3MUS.Devpack.SlackRTMBot\R3MUS.Devpack.SlackRTMBot\obj\Debug\R3MUS.Devpack.SlackRTMBot.pdb
+D:\My Documents\Visual Studio 2015\Projects\R3MUS.Devpack.SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\R3MUS.Devpack.Discord.dll
+D:\My Documents\Visual Studio 2015\Projects\R3MUS.Devpack.SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\R3MUS.Devpack.Discord.pdb
