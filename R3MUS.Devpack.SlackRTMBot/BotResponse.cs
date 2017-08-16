@@ -97,19 +97,19 @@ namespace R3MUS.Devpack.SlackRTMBot
             }
         }
 
-								public static string GetBoardEvents()
-								{
-												var client = new Client() { UserName = Properties.Settings.Default.Email, Password = Properties.Settings.Default.Password };
-												if(client.Logon())
-												{
-																var post = new Post() { content = "!ops", nonce = "340545009352704000", tts = false };
-																client.PostMessage(Properties.Settings.Default.Channel, post);
-																System.Threading.Thread.Sleep(500);
-																var message = client.GetMessages(Properties.Settings.Default.Channel, 0).First();
-																return message.content.Replace("```", "\n");
-												}
-												return "Cannot talk to Jarvis. Sorry old bean.";
-								}
+		public static string GetBoardEvents()
+		{
+			var client = new Client() { UserName = Properties.Settings.Default.Email, Password = Properties.Settings.Default.Password };
+			if(client.Logon())
+			{
+				var post = new Post() { content = "!ops", nonce = "340545009352704000", tts = false };
+				client.PostMessage(Properties.Settings.Default.Channel, post);
+				System.Threading.Thread.Sleep(500);
+				var message = client.GetMessages(Properties.Settings.Default.Channel, 0).First();
+				return message.content.Replace("```", "\n");
+			}
+			return "Cannot talk to Jarvis. Sorry old bean.";
+		}
 
         public static string GetServerStatus()
         {
@@ -174,8 +174,8 @@ namespace R3MUS.Devpack.SlackRTMBot
     public enum Commands
     {
         ops,
-								calendar,
-								deploymentops,
+		calendar,
+		deploymentops,
         evetime,
         serverstatus,
         status,
@@ -191,5 +191,4 @@ namespace R3MUS.Devpack.SlackRTMBot
         joellocation,
         skintassong
     }
-
 }

@@ -20,3 +20,24 @@ d:\my documents\visual studio 2015\Projects\R3MUS.Devpack.SlackRTMBot\R3MUS.Devp
 d:\my documents\visual studio 2015\Projects\R3MUS.Devpack.SlackRTMBot\R3MUS.Devpack.SlackRTMBot\obj\Debug\R3MUS.Devpack.SlackRTMBot.pdb
 D:\My Documents\Visual Studio 2015\Projects\R3MUS.Devpack.SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\R3MUS.Devpack.Discord.dll
 D:\My Documents\Visual Studio 2015\Projects\R3MUS.Devpack.SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\R3MUS.Devpack.Discord.pdb
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\R3MUS.Devpack.SlackRTMBot.exe.config
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\R3MUS.Devpack.SlackRTMBot.exe
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\R3MUS.Devpack.SlackRTMBot.pdb
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\EveLib.Core.dll
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\EveLib.EveXml.dll
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\Nito.AsyncEx.Concurrent.dll
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\Nito.AsyncEx.dll
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\Nito.AsyncEx.Enlightenment.dll
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\R3MUS.Devpack.Core.dll
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\WebSocket4Net.dll
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\EveLib.Core.xml
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\EveLib.EveXml.xml
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\Nito.AsyncEx.xml
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\Nito.AsyncEx.Concurrent.xml
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\Nito.AsyncEx.Enlightenment.xml
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\bin\Debug\R3MUS.Devpack.Discord.pdb
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\obj\Debug\R3MUS.Devpack.SlackRTMBot.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\obj\Debug\R3MUS.Devpack.SlackRTMBot.exe
+C:\Users\Chris\Source\Repos\SlackRTMBot\R3MUS.Devpack.SlackRTMBot\obj\Debug\R3MUS.Devpack.SlackRTMBot.pdb
