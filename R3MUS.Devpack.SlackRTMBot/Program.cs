@@ -57,7 +57,7 @@ namespace R3MUS.Devpack.SlackRTMBot
 		private void Start()
 		{
 			denDeets = start.channels.First(f => f.name.Equals("den"));
-			groupDeets = start.groups.First(f => f.name.Equals("it_projects"));
+			groupDeets = start.groups.First(f => f.name.Equals("it_testing"));
 
 			connection = new WebSocket(start.url);
 			connection.Opened += new EventHandler(connection_Opened);
