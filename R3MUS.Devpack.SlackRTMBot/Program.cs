@@ -109,6 +109,10 @@ namespace R3MUS.Devpack.SlackRTMBot
                 {
                     message.Channel = start.groups.First(f => f.id == message.channel).name;
                 }
+				else if (message.channel.StartsWith("D"))
+				{
+					message.Channel = start.users.First(f => f.id == message.user).name;
+				}
                 else
                 {
                     message.Channel = start.channels.First(f => f.id == message.channel).name;
@@ -131,7 +135,7 @@ namespace R3MUS.Devpack.SlackRTMBot
                         case Commands.ops:
 							connection.SendMessage("Moment please!", message.channel);
 							var response = string.Empty;
-							while(response == string.Empty && ((Commands)Enum.Parse(typeof(Commands), response)) == Commands.ops)
+							while(response == string.Empty && response == Commands.ops.ToString())
 							{
 								response = BotResponse.GetBoardEvents();
 							}
